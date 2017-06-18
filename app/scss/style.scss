@@ -1,10 +1,15 @@
 $color-primary: rgb(61, 114, 180); 
 
+$browser-context: 16; // Default
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
 
 body{
     background-color: $color-primary;
 }
 h1{
     color:white;
-    font-size: 30px;
+    font-size: em(30);
 }
